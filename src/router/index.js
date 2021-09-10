@@ -22,17 +22,17 @@ export default new Router({
 					title: '自定义图标'
 				}
 			}],
+		},
+		{
+			path: '/login',
+			component: () => import( /* webpackChunkName: "login" */ '../components/page/login.vue'),
+			meta: {
+				title: '登录'
+			}
+		},
+		{
+			path: '*',
+			redirect: '/404'
 		}
-		// {
-		// 	path: '/login',
-		// 	component: () => import( /* webpackChunkName: "login" */ '../components/page/Login.vue'),
-		// 	meta: {
-		// 		title: '登录'
-		// 	}
-		// },
-		// {
-		// 	path: '*',
-		// 	redirect: '/404'
-		// }
 	]
 });
